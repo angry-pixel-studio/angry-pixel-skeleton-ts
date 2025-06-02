@@ -15,7 +15,7 @@ export type Assets = {
 
 export const ASSETS: Assets = {
   images: {
-    logo: "image/logo.png",
+    logo: 'image/logo.png',
   },
   fonts: {},
   video: {},

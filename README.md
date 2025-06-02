@@ -42,7 +42,7 @@ npm install
 npm run dev
 ```
 
-The dev environment will run in http://localhost:5173/
+The dev environment will run in http://localhost:3000/
 
 ## Build
 
@@ -55,3 +55,15 @@ npm run build
 ## Share your game
 
 Once built, you will have all the game data inside the `dist` folder, which can be used as a standalone website, or embedded inside an iframe, or shared on sites like [itch.io](itch.io) or [gamejolt.com](gamejolt.com) (in general these sites require the game folder to be uploaded as a .zip file).
+
+## Format code (use [Prettier](https://prettier.io/))
+
+```bash
+npm run format
+```
+
+## Lint code (use [ESLint](https://eslint.org/))
+
+```bash
+npm run lint
+```

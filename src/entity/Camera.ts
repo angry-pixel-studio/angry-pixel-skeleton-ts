@@ -1,5 +1,5 @@
-import { Camera, Transform } from "angry-pixel";
-import { RENDER_LAYERS } from "../config/layers";
+import { Camera, Transform } from 'angry-pixel';
+import { RENDER_LAYERS } from '@config/layers';
 
 export const camera = [
   new Transform(),

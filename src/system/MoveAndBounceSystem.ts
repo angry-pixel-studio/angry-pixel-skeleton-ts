@@ -1,5 +1,5 @@
-import { MoveAndBounce } from "../component/MoveAndBounce";
-import { GameSystem, randomInt, rgbToHex, Transform } from "angry-pixel";
+import { MoveAndBounce } from '@component/MoveAndBounce';
+import { GameSystem, randomInt, rgbToHex, Transform } from 'angry-pixel';
 
 const randomColor = (): string =>
   rgbToHex({
@@ -10,32 +10,22 @@ const randomColor = (): string =>
 
 export class MoveAndBounceSystem extends GameSystem {
   onUpdate(): void {
-    this.entityManager
-      .search(MoveAndBounce)
-      .forEach(({ component, entity }) => {
-        const transform = this.entityManager.getComponent(entity, Transform);
-        const { boundaries, direction, speed } = component;
+    this.entityManager.search(MoveAndBounce).forEach(({ component, entity }) => {
+      const transform = this.entityManager.getComponent(entity, Transform);
+      const { boundaries, direction, speed } = component;
 
-        if (
-          transform.position.y >= boundaries[0] ||
-          transform.position.y <= boundaries[1]
-        ) {
-          direction.y *= -1;
-          this.gameConfig.canvasColor = randomColor();
-        }
+      if (transform.position.y >= boundaries[0] || transform.position.y <= boundaries[1]) {
+        direction.y *= -1;
+        this.gameConfig.canvasColor = randomColor();
+      }
 
-        if (
-          transform.position.x >= boundaries[2] ||
-          transform.position.x <= boundaries[3]
-        ) {
-          direction.x *= -1;
-          this.gameConfig.canvasColor = randomColor();
-        }
+      if (transform.position.x >= boundaries[2] || transform.position.x <= boundaries[3]) {
+        direction.x *= -1;
+        this.gameConfig.canvasColor = randomColor();
+      }
 
-        transform.position.x +=
-          direction.x * speed * this.timeManager.deltaTime;
-        transform.position.y +=
-          direction.y * speed * this.timeManager.deltaTime;
-      });
+      transform.position.x += direction.x * speed * this.timeManager.deltaTime;
+      transform.position.y += direction.y * speed * this.timeManager.deltaTime;
+    });
   }
 }

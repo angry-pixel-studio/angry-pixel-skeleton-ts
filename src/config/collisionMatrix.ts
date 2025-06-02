@@ -1,3 +1,3 @@
-import { CollisionMatrix } from "angry-pixel";
+import { CollisionMatrix } from 'angry-pixel';
 
 export const COLLISION_MATRIX = [] as CollisionMatrix;

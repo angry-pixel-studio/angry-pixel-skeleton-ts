@@ -3,7 +3,7 @@ export type Layers = {
 };
 
 export const RENDER_LAYERS: Layers = {
-  Logo: "Logo",
+  Logo: 'Logo',
 };
 
 export const COLLISION_LAYERS: Layers = {};
