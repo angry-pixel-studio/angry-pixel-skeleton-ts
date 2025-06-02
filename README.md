@@ -8,7 +8,6 @@ The directory structure is based on a layered architecture.
 public:
   - image: Contains the image assets
   - favicon.ico: You can replace it for your game icon.
-  - index.html: Entry point of the game.
 src:
   - component: Contains the component classes.
   - config: Contains the game config, assets, layers, and other config parameters.
