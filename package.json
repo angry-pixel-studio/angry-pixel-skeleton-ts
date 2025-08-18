@@ -19,6 +19,6 @@
     "vite-tsconfig-paths": "^5.1.4"
   },
   "dependencies": {
-    "angry-pixel": "^2.1.7"
+    "angry-pixel": "^2.1.8"
   }
 }
